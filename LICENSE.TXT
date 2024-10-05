@@ -1,0 +1,30 @@
+Custom License for CRM Platform
+
+Copyright (c) 2024 Pratik Hadawale.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to use, copy, modify, and distribute the Software for personal use and non-commercial purposes, subject to the following conditions:
+
+Conditions:
+Non-commercial Use Only:
+
+The Software may only be used for personal projects, academic work, or non-profit activities.
+You are not allowed to sell, resell, or monetize the Software in any way, including through subscriptions, advertisements, or hosting the Software as a paid service.
+No Hosting for Profit:
+
+The Software may not be hosted or provided as a service where users pay to access the functionality of the Software or related services.
+This includes hosting the Software on public platforms for commercial gains, such as Software as a Service (SaaS).
+Attribution:
+
+You must provide clear and appropriate credit, retain this copyright notice, and include a link to the original repository when distributing copies or modifications of the Software.
+You must indicate if any changes were made to the Software in any copies or substantial portions of it.
+Modification and Distribution:
+
+You are free to modify the Software and distribute it, as long as these modifications are for personal, academic, or non-commercial use.
+All modifications must retain this license.
+Prohibited Uses:
+Commercial Hosting or SaaS: You may not offer the Software as a commercial service where users can access, interact, or perform tasks using the Software for payment.
+Selling the Software: You may not sell, license, or charge others for the Software or any derived works, including distributing the Software as part of a commercial product.
+Monetization: You may not generate revenue by offering the Software in conjunction with ads, paid services, or premium features.
+Liability:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
