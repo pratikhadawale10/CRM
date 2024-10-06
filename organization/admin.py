@@ -1,3 +1,7 @@
 from django.contrib import admin
+from organization.models import *
 
-# Register your models here.
+admin.site.register(Organization)
+admin.site.register(OrganizationCategory)
+admin.site.register(OrganizationRole)
+admin.site.register(OrganizationMember)
