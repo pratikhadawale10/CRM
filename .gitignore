@@ -39,6 +39,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+uploads/
 eggs/
 lib/
 lib64/
