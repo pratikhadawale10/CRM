@@ -5,3 +5,6 @@ def sign_in(request):
 
 def sign_up(request):
     return render(request, 'authentication/sign-up.html')
+
+def index(request):
+    return render(request, 'index.html')
