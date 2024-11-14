@@ -67,7 +67,8 @@
 							<!--begin::Wrapper-->
 							<div class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20">
 								<!--begin::Form-->
-								<form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="" action="#">
+								<form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" novalidate="novalidate" id="kt_sign_up_form" data-kt-redirect-url="/auth/personal-details" action="/auth/sign-up">
+									{% csrf_token %}
 									<!--begin::Heading-->
 									<div class="text-center mb-11">
 										<!--begin::Title-->
@@ -268,7 +269,7 @@
 		<script src="static/assets/js/scripts.bundle.js"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="static/assets/js/custom/authentication/sign-in/general.js"></script>
+		<script src="static/assets/js/custom/authentication/sign-up/general.js"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
