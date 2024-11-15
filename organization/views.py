@@ -7,10 +7,9 @@ from organization.models import *
 @redirect_if_already_setup_organization
 def setup_organization(request):
     if request.method == 'GET':
-        contxt = {
-            'organization_categories': OrganizationCategory.objects.all()
-        }
+        contxt = {'organization_categories': OrganizationCategory.objects.all()}
         return render(request, 'organization/setup-organization.html', contxt)
+    
     elif request.method == 'POST':
         type = request.POST.get('type')
         if type == 'create_organization':

@@ -26,6 +26,17 @@ class User(AbstractUser):
         return self.email
     
 
+"""
+    Defines a model for tracking the progress of a user's journey through the application.
+
+    The `UserJourney` model has the following fields:
+    - `id`: A unique UUID identifier for the user journey.
+    - `user`: A one-to-one relationship with the `User` model, representing the user associated with this journey.
+    - `profile_details`: A boolean flag indicating whether the user has completed the profile details step.
+    - `organization_setup`: A boolean flag indicating whether the user has completed the organization setup step.
+    - `created_at`: The date and time when the user journey was created.
+    - `updated_at`: The date and time when the user journey was last updated.
+"""
 class UserJourney(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
