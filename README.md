@@ -6,7 +6,7 @@ Welcome to the **CRM Platform**, an open-source project built using **Django** a
 ## Features
 
 ### 1. Authentication Module
-- Secure user authentication
+- Secure user authentication ✅
 - Role-based access control for different user levels
 
 ### 2. Organization Management
@@ -41,9 +41,9 @@ Welcome to the **CRM Platform**, an open-source project built using **Django** a
 
 
 ## Technologies Used
-- **Django**: High-level Python web framework
-- **HTML Templates**: For rendering the front-end
-- **PostgreSQL**: Database for storing application data
+- **Django**: High-level Python web framework ✅
+- **HTML Templates**: For rendering the front-end ✅
+- **PostgreSQL**: Database for storing application data ✅
 - **Redis**: For handling asynchronous tasks and caching
 - **Celery**: Distributed task queue for background job processing
 - **WebSockets**: For real-time chat and call functionalities

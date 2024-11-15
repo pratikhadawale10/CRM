@@ -46,19 +46,25 @@ def sign_up(request):
 
 
 @login_required_redirect
+@redirect_if_already_profile_setup
 def personal_details(request):
     if request.user.is_authenticated:
+        user = request.user
+        user_journey, created = UserJourney.objects.get_or_create(user=user)
+
         if request.method == 'GET':
             return render(request, 'authentication/personal-details.html')
+        
         if request.method == 'POST':
             first_name = request.POST.get('first_name')
             last_name = request.POST.get('last_name')
             mobile = request.POST.get('mobile')
-            user = request.user
             user.first_name = first_name
             user.last_name = last_name
             user.mobile = mobile
             user.save()
+            user_journey.profile_details = True
+            user_journey.save()
             return redirect('/home')
     else:
         return redirect('/auth/sign-in')
@@ -75,7 +81,7 @@ def index(request):
     return render(request, 'index.html')
 
 
-
+@redirect_if_not_user_journey_completed
 def home(request):
     context = {'title':'Home'}
     return render(request, 'home.html', context)

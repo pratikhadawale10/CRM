@@ -24,3 +24,18 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+    
+
+class UserJourney(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_details = models.BooleanField(default=False)
+    organization_setup = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'user_journey'
+
+    def __str__(self):
+        return self.user.email

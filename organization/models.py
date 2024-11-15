@@ -9,7 +9,7 @@ import uuid
 class OrganizationCategory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -28,7 +28,7 @@ class OrganizationCategory(models.Model):
 class OrganizationRole(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -47,9 +47,10 @@ class OrganizationRole(models.Model):
 """
 class Organization(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_by')
     image =  models.ImageField(upload_to='static/uploads/', null=True, blank=True)
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     category = models.ForeignKey(OrganizationCategory, on_delete=models.CASCADE)
     members = models.ManyToManyField(User, through='OrganizationMember')
     created_at = models.DateTimeField(auto_now_add=True)
